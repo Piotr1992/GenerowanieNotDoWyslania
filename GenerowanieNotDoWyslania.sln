@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerowanieNotDoWyslania.ErpxlAddon", "GenerowanieNotDoWyslania.ErpxlAddon\GenerowanieNotDoWyslania.ErpxlAddon.csproj", "{F5E27C0D-9187-4219-9BC3-C9F77A154D20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testowanie", "Testowanie\Testowanie.csproj", "{C7C49209-BFE0-4527-8AAF-D0276588239D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5E27C0D-9187-4219-9BC3-C9F77A154D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E27C0D-9187-4219-9BC3-C9F77A154D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E27C0D-9187-4219-9BC3-C9F77A154D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E27C0D-9187-4219-9BC3-C9F77A154D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C49209-BFE0-4527-8AAF-D0276588239D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C49209-BFE0-4527-8AAF-D0276588239D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C49209-BFE0-4527-8AAF-D0276588239D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C49209-BFE0-4527-8AAF-D0276588239D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC337829-CB4C-4472-AC52-53271EFC652C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2017:8080/tfs/projekty
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GenerowanieNotDoWyslania.ErpxlAddon\\GenerowanieNotDoWyslania.ErpxlAddon.csproj
+		SccProjectName1 = GenerowanieNotDoWyslania.ErpxlAddon
+		SccLocalPath1 = GenerowanieNotDoWyslania.ErpxlAddon
+		SccProjectUniqueName2 = Testowanie\\Testowanie.csproj
+		SccProjectName2 = Testowanie
+		SccLocalPath2 = Testowanie
+	EndGlobalSection
+EndGlobal

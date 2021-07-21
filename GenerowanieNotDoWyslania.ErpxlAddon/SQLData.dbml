@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CDNXL_PNIPH_KSI_TEST" Class="SQLDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-K9G2C01;Initial Catalog=CDNXL_PNIPH_KSI_TEST;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="GenerowanieNotDoWyslania.ErpxlAddon.Properties.Settings" SettingsPropertyName="CDNXL_PNIPH_KSI_TESTConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="CDN.T2S_GetCrmKampNag" Method="T2S_GetCrmKampNag">
+    <ElementType Name="T2S_GetCrmKampNagResult">
+      <Column Name="Kod" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Numer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GetKampNagEtapy" Method="T2S_GetKampNagEtapy">
+    <Parameter Name="KampNagNumer" Parameter="kampNagNumer" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_GetKampNagEtapyResult">
+      <Column Name="Kod" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Lp" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GetGenNotLastNumer" Method="T2S_GetGenNotLastNumer">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="T2S_GetGenNotLastNumerResult">
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_SaveGenNotLastNumer" Method="T2S_SaveGenNotLastNumer">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Numer" Parameter="numer" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDN.T2S_AddBinaryData" Method="T2S_AddBinaryData">
+    <Parameter Name="Kod" Parameter="kod" Type="System.String" DbType="VarChar(39)" />
+    <Parameter Name="Nazwa" Parameter="nazwa" Type="System.String" DbType="VarChar(99)" />
+    <Parameter Name="Rozszerzenie" Parameter="rozszerzenie" Type="System.String" DbType="VarChar(31)" />
+    <Parameter Name="Plik" Parameter="plik" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="PK" Parameter="pK" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GidTyp" Parameter="gidTyp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GidNumer" Parameter="gidNumer" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_AddBinaryDataResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GetGenNotEtapInfo" Method="T2S_GetGenNotEtapInfo">
+    <Parameter Name="KampNumer" Parameter="kampNumer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="KampLp" Parameter="kampLp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OpeNumer" Parameter="opeNumer" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_GetGenNotEtapInfoResult">
+      <Column Name="WalneZgromadzenieRok" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="SkładkaRok" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="SkładkaWysokość" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="SkładkaTermin" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="SkładkaKoszty" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="NumerRachunku" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="NazwaBanku" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="InfoDodatkowe" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="PodstawaPrawna" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Podpis" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Folder" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Typ" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="DataNota" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="SchematNumer" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="InfoDodatkoweDE" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="PodstawaPrawnaDE" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="IloscDni" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="NazwaNoty" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="CkeNumer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CkeTyp" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CkeLp" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="OpeIdent" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GetReportsGenNot" Method="T2S_GetReportsGenNot">
+    <ElementType Name="T2S_GetReportsGenNotResult">
+      <Column Name="ReportName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Zrodlo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Wydruk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Format" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GetEmailNotaStatut" Method="T2S_GetEmailNotaStatut">
+    <Parameter Name="kntnumer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="openumer" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_GetEmailNotaStatutResult">
+      <Column Name="Ope_ident" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_UpdateAtrybut" Method="T2S_UpdateAtrybut">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="numer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sublp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="klasa" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="wartosc" Type="System.String" DbType="NVarChar(512)" />
+    <Parameter Name="login" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="autoCreateGidTyp" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDN.T2S_Procedure_CounterGenerateNots" Method="T2S_Procedure_CounterGenerateNots">
+    <Parameter Name="numer_noty" Type="System.Int32" DbType="Int" />
+    <Parameter Name="opcja" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="T2S_Procedure_CounterGenerateNotsResult">
+      <Column Name="" Member="Column1" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_Procedure_GenNagEtapKnt_Uzupelniona_ENota" Method="T2S_Procedure_GenNagEtapKnt_Uzupelniona_ENota">
+    <Parameter Name="Numer" Parameter="numer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Lp" Parameter="lp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_Procedure_GenNagEtapKnt_Uzupelniona_ENotaResult">
+      <Column Name="CEK_KntNumer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CEK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FiltrSQL" Type="System.String" DbType="NVarChar(107)" CanBeNull="true" />
+      <Column Name="SchematNumer" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Knt_Akronim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Knt_GIDTyp" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Knt_GIDNumer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Message_EMail" Type="System.String" DbType="VarChar(1321)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GenNagEtapKnt" Method="T2S_GenNagEtapKnt">
+    <Parameter Name="Numer" Parameter="numer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Lp" Parameter="lp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_GenNagEtapKntResult">
+      <Column Name="CEK_KntNumer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CEK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FiltrSQL" Type="System.String" DbType="NVarChar(107)" CanBeNull="true" />
+      <Column Name="SchematNumer" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Knt_Akronim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Knt_GIDTyp" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Knt_GIDNumer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject_Email" Type="System.String" DbType="VarChar(124) NOT NULL" CanBeNull="false" />
+      <Column Name="Message_EMail" Type="System.String" DbType="VarChar(1237)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GenNagEtapKntTAK" Method="T2S_GenNagEtapKntTAK">
+    <Parameter Name="Numer" Parameter="numer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Lp" Parameter="lp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_GenNagEtapKntTAKResult">
+      <Column Name="CEK_KntNumer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CEK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FiltrSQL" Type="System.String" DbType="NVarChar(107)" CanBeNull="true" />
+      <Column Name="SchematNumer" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Knt_Akronim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Knt_GIDTyp" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Knt_GIDNumer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject_Email" Type="System.String" DbType="VarChar(117) NOT NULL" CanBeNull="false" />
+      <Column Name="Message_EMail" Type="System.String" DbType="VarChar(1237)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_GenNagEtapKntNIE" Method="T2S_GenNagEtapKntNIE">
+    <Parameter Name="Numer" Parameter="numer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Lp" Parameter="lp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_GenNagEtapKntNIEResult">
+      <Column Name="CEK_KntNumer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CEK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FiltrSQL" Type="System.String" DbType="NVarChar(107)" CanBeNull="true" />
+      <Column Name="SchematNumer" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Knt_Akronim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Knt_GIDTyp" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Knt_GIDNumer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject_Email" Type="System.String" DbType="VarChar(117) NOT NULL" CanBeNull="false" />
+      <Column Name="Message_EMail" Type="System.String" DbType="VarChar(1237)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_Procedure_PobierzAdresMailowy" Method="T2S_Procedure_PobierzAdresMailowy">
+    <Parameter Name="IdPlatnosci" Parameter="idPlatnosci" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="T2S_Procedure_PobierzAdresMailowyResult">
+      <Column Name="Knt_Email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="CDN.T2S_Procedure_PobierzAdresMailowyOdbiorcy" Method="T2S_Procedure_PobierzAdresMailowyOdbiorcy">
+    <Parameter Name="CEK_ID" Parameter="cEK_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="T2S_Procedure_PobierzAdresMailowyOdbiorcyResult">
+      <Column Name="atr_wartosc" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
